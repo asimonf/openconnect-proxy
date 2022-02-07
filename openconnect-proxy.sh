@@ -24,7 +24,7 @@ else
     exit 2
 fi
 
-cat "${TMP_PASSWORD_FILE}" | exec openconnect --script-tun --script "ocproxy -D 11080" -u ${OPENCONNECT_USERNAME} --passwd-on-stdin --non-inter ${OPENCONNECT_HOST}
+cat "${TMP_PASSWORD_FILE}" | exec openconnect --script-tun --script "ocproxy -D 11080" -u ${OPENCONNECT_USERNAME} --passwd-on-stdin --non-inter ${OPENCONNECT_HOST} --no-cert-check
 
 echo "Finished"
 
